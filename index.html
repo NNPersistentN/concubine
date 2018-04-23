@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>concubine</title>
+    <script type="text/javascript" src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="content">
+    <div class="item one active"></div>
+    <div class="item one"></div>
+    <div class="item one"></div>
+    <div class="item one"></div>
+    <div class="item s"></div>
+    <div class="item City"></div>
+    <div class="item subway"></div>
+    <div class="item Birdseye"></div>
+</div>
+
+<audio id="audio" loop="loop" height="0" width="0" src="02.mp3">
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script>
+    function audioAutoPlay(id){
+
+        var audio = document.getElementById(id),
+            play = function(){
+                audio.play();
+                document.removeEventListener("touchstart",play, false);
+            };
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function() {
+            play();
+        }, false);
+        document.addEventListener("touchstart",play, false);
+    }
+    audioAutoPlay('audio');
+</script>

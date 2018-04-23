@@ -1,0 +1,64 @@
+
+/*透明度切换效果*/
+@keyframes textOpic{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*颜色切换效果*/
+@keyframes cen {
+    0%{
+        background-color: #000;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+
+/*横向移动到左边效果*/
+@keyframes Rightcente {
+    0%{
+        transform: translateX(100%);
+
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*横向移动到中心效果*/
+@keyframes left {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+
+    }
+}
+
+/*地铁移动效果*/
+@keyframes subwayImgs {
+    0%{
+        transform: translate(0,0)  scale(.2);
+    }
+    100%{
+        transform: translate(-15rem,9rem)  scale(1.5);
+
+    }
+}
+/*曲江变大效果*/
+@keyframes Birdseyes {
+    0%{
+        transform: scale(.5);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(.5);
+        opacity: 1;
+    }
+}
